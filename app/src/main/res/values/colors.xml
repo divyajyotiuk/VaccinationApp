@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#E0E0E0</color>
+    <color name="colorPrimaryDark">#FBB8AC</color> //status bar
+    <color name="colorAccent">#FEDBD0</color>   //top app bar
+    <color name="toolbarIconColor">#000000</color>
+    <color name="colorControlActivated">#FBB8AC</color>
+    </resources>

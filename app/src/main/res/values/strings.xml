@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VaccinationApp</string>
+    <string name="VaccineLog">Vaccine Log</string>
+</resources>
