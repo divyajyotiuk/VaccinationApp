@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VaccinationApp</string>
     <string name="VaccineLog">Vaccine Log</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="time">Time</string>
+    <string name="done">Done</string>
 </resources>

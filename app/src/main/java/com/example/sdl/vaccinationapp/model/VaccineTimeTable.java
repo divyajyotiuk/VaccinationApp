@@ -14,7 +14,8 @@ public class VaccineTimeTable {
 
     private String title;
     private int image;
-    private String date;
+    private String description;
+
 
     public static Date valueOf (String s)
     {
@@ -25,8 +26,13 @@ public class VaccineTimeTable {
         this.title = title;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public String getDescription()
+    {
+        return description;
+    }
+    public void setDescription(String description)
+    {
+        this.description=description;
     }
     public void setImage(int image)
     {
@@ -42,38 +48,25 @@ public class VaccineTimeTable {
         return title;
     }
 
-    public String getDate()
-    {
-        return date;
-    }
     public static ArrayList<VaccineTimeTable> getdata(){
 
         ArrayList<VaccineTimeTable> datalist = new ArrayList<>();
         for(int i=0;i<10;i++)
         {
-            int images[] = getImages();
+            int images = getImages();
             VaccineTimeTable table = new VaccineTimeTable();
-            table.setImage(images[i]);
+            table.setImage(images);
             table.setTitle("Vaccine "+ i);
+            table.setDescription("Description "+i);
             datalist.add(table);
         }
         return datalist;
     }
 
-    public static int[] getImages()
+
+    public static int getImages()
     {
-        int[] images = {
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18,
-                R.drawable.baseline_done_black_18
-        } ;
+        int images = R.drawable.baseline_done_black_18;
         return images;
     }
 }

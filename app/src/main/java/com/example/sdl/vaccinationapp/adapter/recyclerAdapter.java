@@ -3,11 +3,13 @@ package com.example.sdl.vaccinationapp.adapter;
 import android.content.Context;
 import android.nfc.Tag;
 import android.support.annotation.NonNull;
+import android.support.design.animation.AnimationUtils;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,29 +49,31 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return 10;
+        return vaccineList.size();
     }
 
     class MyViewHolder extends  RecyclerView.ViewHolder {
 
-        TextView title;
+        TextView title,t;
         ImageView done;
         int position;
         VaccineTimeTable current;
 
         public MyViewHolder(View itemView){
             super(itemView);
+            t = itemView.findViewById(R.id.t);
             title = (TextView) itemView.findViewById(R.id.VaccineName);
             done = (ImageView) itemView.findViewById(R.id.doneVaccine);
 
                     }
 
         public void getData(VaccineTimeTable currentObj, int position) {
-            this.title.setText(current.getTitle());
-            this.done.setImageResource(current.getImage());
+            this.title.setText(currentObj.getTitle());
+            this.t.setText(currentObj.getDescription());
+            this.done.setImageResource(currentObj.getImage());
             this.position=position;
-            this.current=current;
-
+            this.current=currentObj;
+            //final Animation a = android.view.animation.AnimationUtils.loadAnimation(this,R.anim.mytransition);
         }
     }
 
