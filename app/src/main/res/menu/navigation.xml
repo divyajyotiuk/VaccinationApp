@@ -5,15 +5,18 @@
         android:id="@+id/doneAll"
         android:title="Done"
         android:icon="@drawable/baseline_done_outline_black_18dp"
+
         />
 
     <item
         android:id="@+id/pending"
         android:title="Pending"
         android:icon="@drawable/baseline_schedule_black_18dp"
+
         />
 
-    <item android:title="Near By"
+    <item android:title="Nearby"
             android:id="@+id/hospitals"
+
         android:icon="@drawable/baseline_location_on_black_24" />
 </menu>

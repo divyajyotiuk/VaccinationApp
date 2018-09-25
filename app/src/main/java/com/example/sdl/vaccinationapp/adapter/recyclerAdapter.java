@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sdl.vaccinationapp.Fragments.FragmentPending;
 import com.example.sdl.vaccinationapp.R;
 import com.example.sdl.vaccinationapp.model.VaccineTimeTable;
 
@@ -24,9 +25,11 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
     private List<VaccineTimeTable> vaccineList;
     private LayoutInflater inflater;
+    Context context;
 
     public recyclerAdapter(Context context, List<VaccineTimeTable> myVaccineList)
     {
+        this.context = context;
         this.vaccineList = myVaccineList;
         this.inflater = LayoutInflater.from(context);
     }
@@ -52,7 +55,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
         return vaccineList.size();
     }
 
-    class MyViewHolder extends  RecyclerView.ViewHolder {
+    public class MyViewHolder extends  RecyclerView.ViewHolder {
 
         TextView title,t;
         ImageView done;

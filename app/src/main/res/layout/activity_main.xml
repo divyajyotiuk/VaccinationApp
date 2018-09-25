@@ -9,6 +9,7 @@
     android:layout_height="match_parent"
 
     >
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,6 +24,10 @@
         layout="@layout/toolbar"
         />
 
+
+</LinearLayout>
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,19 +36,10 @@
         >
     </FrameLayout>
 
-
     <include
         android:id="@+id/nav_container"
         layout="@layout/bottom_nav_bar"
-          />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
-</LinearLayout>
+        />
 
     <fragment
         android:id="@+id/backdrop_menu_fragment"

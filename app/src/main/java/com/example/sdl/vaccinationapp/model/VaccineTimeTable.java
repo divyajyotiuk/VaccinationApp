@@ -25,7 +25,7 @@ public class VaccineTimeTable {
         public void setTitle(String title) {
         this.title = title;
     }
-
+//getter and setter
     public String getDescription()
     {
         return description;

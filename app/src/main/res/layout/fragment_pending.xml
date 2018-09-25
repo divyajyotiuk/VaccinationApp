@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.sdl.vaccinationapp.Fragments.FragmentPending"
+    android:background="?android:attr/windowBackground"
     >
 
-    <ImageView
-        android:id="@+id/pending_image"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/baseline_schedule_black_18dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pendingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.support.v7.widget.RecyclerView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pending_image"
-        android:layout_centerHorizontal="true"
-        android:text="Pending"
-        android:textSize="30sp"/>
-
-</RelativeLayout>
+</LinearLayout>
